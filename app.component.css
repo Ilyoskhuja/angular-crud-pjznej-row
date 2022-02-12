@@ -1,0 +1,160 @@
+.e-gridlist .e-tbar-btn.e-btn,
+.e-gridlist .e-btn {
+  box-shadow: none;
+  text-transform: none;
+}
+
+.e-ghidden {
+  opacity: 0.35;
+}
+
+.e-mastertext {
+  font-size: 15px;
+  font-family: Roboto;
+  opacity: 0.87;
+  padding: 1em;
+}
+#dialog-container {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+#container {
+  visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  left: 45%;
+  position: absolute;
+  top: 45%;
+  width: 30%;
+}
+
+/* .e-treegrid  .e-columnheader .e-headercell { 
+  background-color: green; 
+}  */
+
+/* .e-treegrid .e-headercell{
+  background-color: #2382c3;
+  color: white;
+  font-family: 'Bell MT';
+  font-size: '20px';
+} */
+
+.e-treegrid .e-headercell.customcssa {
+  background-color: blue;
+  color: yellow;
+  font-size: '20px';
+}
+.e-treegrid .e-headercell.customcssb {
+  background-color: blue;
+  color: white;
+  font-size: '20px';
+}
+.e-treegrid .e-headercell.customcssc {
+  background-color: green;
+  color: white;
+  font-size: '15px';
+}
+
+.e-treegrid .e-headercell.customcssd {
+  background-color: green !important;
+  color: yellow !important;
+  font-size: '15px'!important;
+}
+
+
+/*********Reactive form****************
+#reactive .form-group .submit-btn {
+  margin-top: 15px;
+  position: relative;
+  }
+  #reactive .form-group .desc {
+  margin: 2% 16% 0% 18%;
+  }
+  @media only screen and (max-width: 500px) {
+    #reactive .form-group .submitBtn .desc {
+    margin: 12px;
+  }
+  }
+  #reactive .form-group .submitBtn {
+  position: relative;        
+  text-align: center;
+  }
+  .bootstrap #reactive .form-group .submit-btn {
+  margin-left: 8px;          
+  }
+  .e-bigger.material #reactive .form-group .submit-btn {
+  margin-left: -7px;          
+  }
+  .fabric #reactive .form-group .submit-btn, .highcontrast #reactive .form-group .submit-btn {
+  margin-left: -11px;          
+  }
+  .e-bigger.fabric #reactive .form-group .submit-btn, .e-bigger.highcontrast #reactive .form-group .submit-btn {
+  margin-left: -25px;          
+  }
+  .e-bigger.bootstrap #reactive .form-group .submit-btn {
+  margin-left: -8px;          
+  }
+  .success .successmsg {
+  border: 0.5px solid green;
+  padding: 10%;
+  color: green;
+  }
+  form#reactive {
+  position: relative;
+  top: 14%;
+  }
+  #reactive .e-upload {
+  display: none;
+  }
+  #reactive .upload-area button#browse {
+  float: right;
+  margin-top: -28px;
+  }
+  .fabric #reactive .upload-area button#browse,
+  .highcontrast #reactive .upload-area button#browse {
+    float: right;
+    margin-top: -32px;
+    }
+    .bootstrap #reactive .upload-area button#browse {
+    float: right;
+    margin-top: -35px;
+    }
+    .fabric.e-bigger #reactive .upload-area button#browse,
+  .highcontrast.e-bigger #reactive .upload-area button#browse,
+  .bootstrap.e-bigger #reactive .upload-area button#browse {
+      margin-top: -40px;
+    }
+    .material.e-bigger #reactive .upload-area button#browse {  
+      margin-top: -36px;
+      }
+    .b
+  #reactive .form-group .e-float-input.upload-area .e-float-line, .material .e-float-input.upload-area .e-float-line {  
+    width: 70%;
+    margin-top: initial;
+  }
+  #reactive .form-group .upload-area input {
+  width: 100%;
+  }
+  
+  @media (min-width: 250px) and (max-width: 500px) {
+  #control_wrapper.control_wrapper {
+    padding: 1% 4% 12%;
+  }
+  }
+  @media (max-width: 300px) {
+  #control_wrapper.control_wrapper {
+    padding: 1% 4% 15%;
+  }
+  }
+  .bootstrap #reactive .form-group .upload-area {
+   background: transparent;
+  }
+  .form-title {
+  text-align: center;
+  }*/
