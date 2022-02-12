@@ -7,21 +7,7 @@
     
   <button type="button" style="height:20px;width:60px" (click)="closeP('showChooser')">X</button>
   </div>
-  <ejs-toolbar
-    class="e-gridlist"
-    *ngIf="showChooser"
-    (clicked)="onClicked($event.originalEvent)"
-  >
-    <e-items>
-      <e-item text="Task ID"></e-item>
-      <e-item text="Task Name"></e-item>
-      <e-item text="Start Date"></e-item>
-      <e-item text="End Date"></e-item>
-      <e-item text="Duration"></e-item>
-      <e-item text="Progress"></e-item>
-      <e-item text="Priority"></e-item>
-    </e-items>
-  </ejs-toolbar>
+
   <div *ngIf="sorting" class="col-lg-3 property-section">
   <div class="property-panel-section">
     <div style="display:flex; justify-content:space-between">
@@ -104,39 +90,8 @@
       </table>
   </div>
 </div>
-<div *ngIf="filtering">
-  <br />
-  <button  type="button" style="height:20px;width:160px" (click)="closeP('filtering')">Close FilterBar</button>
-  <br />
-</div>
-  <!-- <button #btn1 ejs-button cssClass="e-flat" [isToggle]="true"  (click)="clickChange()">Change Header Text</button> -->
 
-  <!-- <button ej-button class="e-flat" (click)="delete()">Delete</button>
-<button
-ejs-button
-cssclass="DefaultButton"
-(click)="onAddRecordNoParams($event)"
->
-Add Child Record no Parameters
-</button>
-<button
-ejs-button
-class="DefaultButton"
-(click)="onAddRecordWithParams($event)"
->
-Add Child Record with Parameters
-</button> -->
-  <!-- <input type="button" value="Update" id="manipulate" (click)="update()" /> -->
-  <!-- <br />  (created)="created($event)" (beforePaste)="beforePaste($event)"
-  -->
-  <!-- <button
-ejs-button
-class="DefaultButton"
-(click)="addColumn()"
->
-addColumn
-</button> -->
-
+  
   <ejs-treegrid
     #treegrid
     [dataSource]="data"
@@ -152,7 +107,7 @@ addColumn
     [editSettings]="editSettings"
     [allowSelection]="true"
     [selectionSettings]="selectionOptions"
-    [toolbar]="toolbar"
+   
     [pageSettings]="pageSettings"
     [filterSettings]="filterSettings"
     height="100vh"
@@ -164,117 +119,11 @@ addColumn
     (contextMenuOpen)="contextMenuOpen($event)"
     (contextMenuClick)="contextMenuClick($event)"
     (dataBound)="dataBound()"
-    (toolbarClick)="toolabarclickHandler($event)"
     (actionBegin)="actionBegin($event)"
     (actionComplete)="actionComplete($event)"
     [columns]="treeColumns"
     (rowSelected)="rowSelected($event)"
   >
-  <!-- [allowFiltering]="filtering"
-    [allowSorting]="sorting"
-    [sortSettings]='sortSettings' 
-    [allowResizing]="true"
-    [allowTextWrap]="textWrap"
-    allowReordering="true"
-    [allowRowDragAndDrop]="true"
-    [editSettings]="editSettings"
-    [allowSelection]="true"
-    [selectionSettings]="selectionOptions"
-    [toolbar]="toolbar"
-    [pageSettings]="pageSettings"
-    [filterSettings]="filterSettings"
-    height="100vh"
-    width="100vw"
-    idMapping="TaskID"
-    parentIdMapping="ParentItem"
-    hasChildMapping="isParent"
-    [contextMenuItems]="contextMenuItems"
-    (contextMenuOpen)="contextMenuOpen($event)"
-    (contextMenuClick)="contextMenuClick($event)"
-    (dataBound)="dataBound()"
-    (toolbarClick)="toolabarclickHandler($event)"
-    (actionBegin)="actionBegin($event)"
-    (actionComplete)="actionComplete($event)"
-    [columns]="treeColumns"
-    (rowSelected)="rowSelected($event)" -->
-    <!-- [enableHover]="false" -->
-
-    <!-- (rowSelected)="rowSelected($event)" -->
-
-    <!-- <e-columns>
-    <e-column
-      [isPrimaryKey]="true"
-      field="TaskID"
-      headerText="Task ID"
-      width="80"
-      textAlign="Right"
-      editType="numericedit"
-      type="number"
-      [customAttributes]='customAttributes'
-    ></e-column>
-    <e-column
-      field="TaskName"
-      editType="stringedit"
-      [validationRules]="stringRule"
-      headerText="Task Name"
-      width="210"
-      type="string"
-      
-      [customAttributes]='customAttributes'
-    ></e-column>
-    <e-column
-      field="StartDate"
-      headerText="Start Date"
-      width="100"
-      format="yMd"
-      textAlign="Right"
-      editType="datepickeredit"
-      [validationRules]="dateRule"
-      type="date"
-      [customAttributes]='customAttributes'
-    ></e-column>
-    <e-column
-      field="EndDate"
-      headerText="End Date"
-      width="100"
-      format="yMd"
-      textAlign="Right"
-      editType="datepickeredit"
-      [validationRules]="dateRule"
-      type="date"
-      [customAttributes]='customAttributes'
-    ></e-column>
-    <e-column
-      field="Duration"
-      headerText="Duration"
-      width="80"
-      textAlign="Right"
-      editType="numericedit"
-      [filterBarTemplate]="templateOptions"
-      [validationRules]="progressRule"
-      type="number"
-      [customAttributes]='customAttributes'
-    ></e-column>
-    <e-column
-      field="Progress"
-      headerText="Progress"
-      width="80"
-      textAlign="Right"
-      editType="stringedit"
-      [validationRules]="stringRule"
-      type="string"
-      [customAttributes]='customAttributes'
-    ></e-column>
-    <e-column
-      field="Priority"
-      headerText="Priority"
-      width="90"
-      editType="dropdownedit"
-      [validationRules]="stringRule"
-      type="string"
-      [customAttributes]='customAttributes'
-    ></e-column>
-  </e-columns> -->
   </ejs-treegrid>
   <div *ngIf="showEditColumn"
   >
@@ -318,44 +167,9 @@ addColumn
               name="ColType"
               [(ngModel)]="ColType" 
             ></ejs-dropdownlist>
-            <!-- <span class="e-float-line"></span>
-            <label class="e-float-text e-label-top" for="email">Data-Type</label> -->
           </div>
         </div>
 
-        <!-- <div class="form-group" style="padding-top: 11px;">
-          <div class="e-float-input">
-            <input
-              type="text"
-              id="email"
-              #emailval="ngModel"
-              name="email"
-              required
-              ngModel
-            />
-            <span class="e-float-line"></span>
-            <label class="e-float-text e-label-top" for="email"
-              >Default-Value</label
-            >
-          </div>
-        </div> -->
-
-        <!-- <div class="form-group" style="padding-top: 11px;">
-          <div class="e-float-input">
-            <input
-              type="text"
-              id="email"
-              #emailval="ngModel"
-              name="email"
-              required
-              ngModel
-            />
-            <span class="e-float-line"></span>
-            <label class="e-float-text e-label-top" for="email"
-              >Minimum-Column-Width</label
-            >
-          </div>
-        </div> -->
         <div class="form-group" style="padding-top: 11px;">
           <div class="e-float-input">
             <ejs-dropdownlist
@@ -369,8 +183,6 @@ addColumn
               [(ngModel)]="ColMinWidth" 
             ></ejs-dropdownlist>
 
-            <!-- <span class="e-float-line"></span>
-    <label class="e-float-text e-label-top" for="email">Font-size</label> -->
           </div>
         </div>
 
